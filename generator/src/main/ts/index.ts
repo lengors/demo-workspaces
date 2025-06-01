@@ -3,9 +3,9 @@ import fs from "fs/promises";
 
 import { z } from "zod/v4-mini";
 
-import "schemas/io/github/lengors/protoscout/domain/scrapers/models/scraper-request";
-import "schemas/io/github/lengors/protoscout/domain/scrapers/models/scraper-response";
-import "schemas/io/github/lengors/protoscout/domain/scrapers/specifications/models/scraper-specification";
+import "@lengors/schemas/io/github/lengors/protoscout/domain/scrapers/models/scraper-request";
+import "@lengors/schemas/io/github/lengors/protoscout/domain/scrapers/models/scraper-response";
+import "@lengors/schemas/io/github/lengors/protoscout/domain/scrapers/specifications/models/scraper-specification";
 
 async function main() {
   const dryRun = process.argv.includes("--dry-run");
