@@ -1,3 +1,9 @@
+# [v2.0.0](https://github.com/lengors/demo-workspaces/compare/v1.3.2...v2.0.0) (2025-06-01)
+
+## 💥 Breaking Changes
+
+- [`0713134`](https://github.com/lengors/demo-workspaces/commit/0713134) Restructure project
+
 # [v1.3.2](https://github.com/lengors/demo-workspaces/compare/v1.3.1...v1.3.2) (2025-06-01)
 
 ## 🐛 Bug Fixes
