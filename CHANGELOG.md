@@ -1,3 +1,9 @@
+# [v1.3.2](https://github.com/lengors/demo-workspaces/compare/v1.3.1...v1.3.2) (2025-06-01)
+
+## 🐛 Bug Fixes
+
+- [`8c9cda4`](https://github.com/lengors/demo-workspaces/commit/8c9cda4) Fix deployment
+
 # [v1.3.1](https://github.com/lengors/demo-workspaces/compare/v1.3.0...v1.3.1) (2025-06-01)
 
 ## 🐛 Bug Fixes
