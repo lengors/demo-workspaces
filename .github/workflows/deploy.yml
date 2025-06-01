@@ -51,7 +51,7 @@ jobs:
       - name: Copy schemas to schemas branch
         run: |
           mkdir -p schemas/${{ github.ref_name }}
-          cp -R source/generator/dist schemas/${{ github.ref_name }}/
+          cp -R source/generator/dist/* schemas/${{ github.ref_name }}/
 
       - name: Import GPG key
         uses: crazy-max/ghaction-import-gpg@v6
