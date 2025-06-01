@@ -232,3 +232,4 @@ src/
 .nycrc.json
 .prettierignore
 .prettierrc
+tsconfig.json
