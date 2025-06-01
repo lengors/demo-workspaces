@@ -1,3 +1,9 @@
+# [v1.3.1](https://github.com/lengors/demo-workspaces/compare/v1.3.0...v1.3.1) (2025-06-01)
+
+## 🐛 Bug Fixes
+
+- [`9d2961e`](https://github.com/lengors/demo-workspaces/commit/9d2961e) Fix deployment
+
 # [v1.3.0](https://github.com/lengors/demo-workspaces/compare/v1.2.0...v1.3.0) (2025-06-01)
 
 ## ✨ New Features
