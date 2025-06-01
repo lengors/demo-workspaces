@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "allowJs": true /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */,
+    "noEmit": true /* Disable emitting files from a compilation. */
+  },
+  "include": ["./**/*.ts", "eslint.config.mjs"]
+}

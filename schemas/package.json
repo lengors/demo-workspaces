@@ -1,0 +1,32 @@
+{
+  "name": "schemas",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "exports": {
+    "./*": "./dist/*.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha",
+    "test:watch": "npm run test -- --watch",
+    "test:coverage": "nyc npm run test"
+  },
+  "dependencies": {
+    "zod": "^3.25.28"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
+    "@types/chai": "^5.2.2",
+    "@types/mocha": "^10.0.10",
+    "chai": "^5.2.0",
+    "mocha": "^11.5.0",
+    "nyc": "^17.1.0",
+    "ts-node": "^10.9.2"
+  }
+}
