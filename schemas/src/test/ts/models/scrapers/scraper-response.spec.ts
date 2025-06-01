@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { describe, it } from "mocha";
-import { ScraperResponse } from "../../../../../../../../../main/ts/io/github/lengors/protoscout/domain/scrapers/models/scraper-response";
+import { ScraperResponse } from "../../../../main/ts/models/scrapers/scraper-response";
 
 describe("ScraperResponse", () => {
   it("should create a valid ScraperResponseError", () => {

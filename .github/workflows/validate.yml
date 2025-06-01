@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Validate files' formatting
-        run: npx prettier --check .
+        run: npm run prettier:check
 
   eslint:
     runs-on: ubuntu-latest

@@ -1,14 +1,6 @@
 {
-  "name": "@lengors/generator",
-  "version": "1.0.0",
-  "description": "",
-  "license": "ISC",
-  "author": "",
   "type": "commonjs",
   "scripts": {
     "build": "ts-node src/main/ts/index.ts"
-  },
-  "devDependencies": {
-    "ts-node": "^10.9.2"
   }
 }
