@@ -51,8 +51,7 @@ jobs:
       - name: Copy schemas to schemas branch
         working-directory: schemas
         run: |
-          shopt -s dotglob
-          rm -rf !(.git)
+          find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
           cp -R ../source/generator/dist/* ./
 
       - name: Import GPG key
