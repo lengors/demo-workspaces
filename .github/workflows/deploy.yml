@@ -5,6 +5,7 @@ on:
   push:
     tags:
       - "v*.*.*"
+      - "!v.*.*.*+schemas"
 
 jobs:
   deploy:
@@ -80,6 +81,6 @@ jobs:
           ref=${{ github.ref }}
           git config user.name "${{ steps.import-gpg.outputs.name }}"
           git config user.email "${{ steps.import-gpg.outputs.email }}"
-          git tag -s -m "🔖 Release ${ref/refs\/tags\//} schemas" "schemas-${ref/refs\/tags\//}"
-          git push origin tag "schemas-${ref/refs\/tags\//}"
+          git tag -s -m "🔖 Release ${ref/refs\/tags\//} schemas" "${ref/refs\/tags\//}+schemas"
+          git push origin tag "${ref/refs\/tags\//}+schemas"
         working-directory: schemas
