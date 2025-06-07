@@ -1,3 +1,9 @@
+# [v2.0.7](https://github.com/lengors/demo-workspaces/compare/v2.0.6...v2.0.7) (2025-06-07)
+
+## 🐛 Bug Fixes
+
+- [`b4fbc95`](https://github.com/lengors/demo-workspaces/commit/b4fbc95) Fix deployment
+
 # [v2.0.6](https://github.com/lengors/demo-workspaces/compare/v2.0.5...v2.0.6) (2025-06-07)
 
 ## 🐛 Bug Fixes
