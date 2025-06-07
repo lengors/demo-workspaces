@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "readOnly": true,
+  "id": "io/github/lengors/protoscout/domain/scrapers/models/scraper-response-result-stock.json",
+  "title": "Scraper response result stock.",
+  "description": "Stock data associated with result of scraper.",
+  "javaType": "io.github.lengors.protoscout.domain.scrapers.models.ScraperResponseResultStock",
+  "javaInterfaces": [
+    "java.io.Serializable"
+  ],
+  "type": "object",
+  "properties": {
+    "availability": {
+      "$ref": "scraper-response-result-quantity.json"
+    },
+    "storage": {
+      "type": "string",
+      "title": "Result availability storage.",
+      "description": "Storage associated with given availability of scrapped result."
+    },
+    "delivering_on": {
+      "anyOf": [
+        {
+          "$ref": "scraper-response-result-date-time-instant.json"
+        },
+        {
+          "$ref": "scraper-response-result-date-time-range.json"
+        }
+      ],
+      "existingJavaType": "io.github.lengors.protoscout.domain.scrapers.models.ScraperResponseResultDateTime"
+    }
+  },
+  "required": [
+    "availability"
+  ]
+}
