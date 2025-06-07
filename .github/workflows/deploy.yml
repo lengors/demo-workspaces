@@ -5,7 +5,7 @@ on:
   push:
     tags:
       - "v*.*.*"
-      - "!v*.*.*\\+schemas"
+      - "!(v*.*.*\\+schemas)"
 
 jobs:
   deploy:
