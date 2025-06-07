@@ -67,9 +67,10 @@ jobs:
 
       - name: Commit and tag schemas
         run: |
+          ref=${{ github.ref }}
           git config user.name "${{ steps.import-gpg.outputs.name }}"
           git config user.email "${{ steps.import-gpg.outputs.email }}"
-          git add ${{ github.ref_name }}
+          git add .
           git commit -m "🗃️ Update schemas for version ${ref/refs\/tags\//}"
           git tag -s -m "Release ${ref/refs\/tags\//}" "schemas-${ref/refs\/tags\//}"
           git push
