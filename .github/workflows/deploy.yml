@@ -5,7 +5,7 @@ on:
   push:
     tags:
       - "v*.*.*"
-      - "!v.*.*.*\\+schemas"
+      - "!v*.*.*\\+schemas"
 
 jobs:
   deploy:
@@ -72,7 +72,7 @@ jobs:
           git config user.name "${{ steps.import-gpg.outputs.name }}"
           git config user.email "${{ steps.import-gpg.outputs.email }}"
           git add .
-          git commit -m "🗃️ Update schemas for version ${ref/refs\/tags\//}"
+          git commit --allow-empty -m "🗃️ Update schemas for version ${ref/refs\/tags\//}"
           git push
         working-directory: schemas
   
