@@ -49,10 +49,10 @@ jobs:
         working-directory: source
 
       - name: Copy schemas to schemas branch
-        working-directory: schemas
         run: |
-          find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
-          cp -R ../source/generator/dist/* ./
+          rm -rf schemas/src
+          mkdir -p schemas/src
+          cp -R source/generator/dist/* schemas/src
 
       - name: Import GPG key
         uses: crazy-max/ghaction-import-gpg@v6
@@ -65,13 +65,21 @@ jobs:
           git_tag_gpgsign: true
           workdir: schemas
 
-      - name: Commit and tag schemas
+      - name: Commit schemas
         run: |
           ref=${{ github.ref }}
           git config user.name "${{ steps.import-gpg.outputs.name }}"
           git config user.email "${{ steps.import-gpg.outputs.email }}"
           git add .
           git commit -m "🗃️ Update schemas for version ${ref/refs\/tags\//}"
-          git tag -s -m "Release ${ref/refs\/tags\//}" "schemas-${ref/refs\/tags\//}"
           git push
+        working-directory: schemas
+  
+      - name: Tag schemas
+        run: |
+          ref=${{ github.ref }}
+          git config user.name "${{ steps.import-gpg.outputs.name }}"
+          git config user.email "${{ steps.import-gpg.outputs.email }}"
+          git tag -s -m "🔖 Release ${ref/refs\/tags\//} schemas" "schemas-${ref/refs\/tags\//}"
+          git push origin tag "schemas-${ref/refs\/tags\//}"
         working-directory: schemas
